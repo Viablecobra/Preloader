@@ -59,7 +59,7 @@ void ModManager::LoadAndInitializeEnabledMods(const std::string &modsDir,
       continue;
     fs::path destPath = fs::path(dataDir) / "mods" / entry.path().filename();
     if (void *handle = dlopen(destPath.c_str(), RTLD_NOW)) {
-      LoadFunc func = (LoadFunc)dlsym(handle, "LeviMod_Load");
+      LoadFunc func = (LoadFunc)dlsym(handle, "XeloMod_Load");
       if (func) {
         func(vm);
       }
