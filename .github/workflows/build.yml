@@ -21,11 +21,11 @@ jobs:
           distribution: temurin
           java-version: "17"
 
-      - name: Set up Android NDK 27.1.12297006
+      - name: Set up Android NDK
         id: setup-ndk
         uses: nttld/setup-ndk@v1
         with:
-          ndk-version: 27.1.12297006
+          ndk-version: r27b
 
       - name: Configure CMake for Android arm64
         run: |
