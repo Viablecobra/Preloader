@@ -61,7 +61,7 @@ JNIEXPORT jint JNI_OnLoad(JavaVM* vm, void* reserved) {
 }
 
 JNIEXPORT void JNICALL
-Java_org_levimc_launcher_core_minecraft_MinecraftActivity_nativeOnLauncherLoaded(
+Java_com_origin_launcher_Launcher_MinecraftActivity_nativeOnLauncherLoaded(
         JNIEnv* env,
         jobject thiz,
         jstring libPath
@@ -93,14 +93,14 @@ Java_org_levimc_launcher_core_minecraft_MinecraftActivity_nativeOnLauncherLoaded
 }
 
 JNIEXPORT void JNICALL
-Java_org_levimc_launcher_core_minecraft_MinecraftLauncher_nativeOnLauncherLoaded(
+Java_com_origin_launcher_Launcher_MinecraftLauncher_nativeOnLauncherLoaded(
         JNIEnv* env,
         jobject thiz,
         jstring libPath
 ) {
 
 
-    Java_org_levimc_launcher_core_minecraft_MinecraftActivity_nativeOnLauncherLoaded(env, thiz, libPath);
+    Java_com_origin_launcher_Launcher_MinecraftActivity_nativeOnLauncherLoaded(env, thiz, libPath);
 }
 
 }
